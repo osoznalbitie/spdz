@@ -3,7 +3,7 @@ session_start();
 require_once('model/Adress.php');
 require_once('model/User.php');
 //имитация выгрузки бд
-$admin = new User(0,'user',0,'qwerty1234',0,2);
+$admin = new User(0,'user',0,'qwerty227',0,2);
 $u1 = new User(1,'Alex',18, '444', 1,1);
 
 if (!isset($_SESSION['userArray'])) {
