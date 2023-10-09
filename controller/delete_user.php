@@ -9,10 +9,12 @@ if (isset($_POST['id'])) {
     }
 
     for ($i = 0; $i < count($_SESSION['userArray']); $i++) {
-        if ($_SESSION['userArray'][$i]->getID() == $_POST['id']) {
-            unset($_SESSION['userArray'][$i]);
-            header('Location: /panel.php');
-            die;
+        if (isset($_SESSION['userArray'][$i])) {    
+            if ($_SESSION['userArray'][$i]->getID() == $_POST['id']) {
+                unset($_SESSION['userArray'][$i]);
+                header('Location: /panel.php');
+                die;
+            }
         }
     }
 }

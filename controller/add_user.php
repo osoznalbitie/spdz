@@ -11,7 +11,8 @@ foreach($_SESSION['userArray'] as $user)
 $newAdress = new Adress(count($_SESSION['adressArray']), $_POST['city'],$_POST['country']);
 array_push($_SESSION['adressArray'],$newAdress);
 
-$newUser = new User(count($_SESSION['userArray']),$_POST['name'],$_POST['age'], $_POST['password'],count($_SESSION['adressArray'])-1,$_POST['role']);
+++$_SESSION['currentID'];
+$newUser = new User($_SESSION['currentID'],$_POST['name'],$_POST['age'], $_POST['password'],count($_SESSION['adressArray'])-1,$_POST['role']);
 array_push($_SESSION['userArray'], $newUser);
 
 header('Location:/panel.php');

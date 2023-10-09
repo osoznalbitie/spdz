@@ -10,6 +10,7 @@ if (!isset($_SESSION['userArray'])) {
     $_SESSION['userArray'] = [];
     array_push($_SESSION['userArray'],$admin);
     array_push($_SESSION['userArray'],$u1);
+    $_SESSION['currentID'] = 1;
 }
 $adminAdress = new Adress(0,'Russia','Moscow');
 $a1 = new Adress(0,'Russia','Uryupinsk');

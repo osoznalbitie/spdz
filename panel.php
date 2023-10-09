@@ -19,6 +19,7 @@
         }
     }
     ?>
+    <style>input[type="submit"] {margin-bottom: 20px;}</style>
 </head>
 <body>
     <a href="index.php">Назад</a>
